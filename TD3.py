@@ -124,7 +124,7 @@ class TD3(object):
 		return torch.sum(weighted_squared_error) / torch.numel(weighted_squared_error)
 
 
-	def train(self, replay_buffer, batch_size=256):
+	def train(self, replay_buffer, batch_size=1024):
 		self.total_it += 1
 
 		# Sample replay buffer 
